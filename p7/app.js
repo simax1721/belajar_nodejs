@@ -1,3 +1,8 @@
 const fs = require('fs');
 
-console.log(fs);
+
+try {
+    fs.writeFileSync('data/text.txt', 'hello world syncronus');
+} catch (e) {
+    console.log(e);
+}
